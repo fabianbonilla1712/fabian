@@ -8,3 +8,9 @@
 # 8. Calcular el factorial de n si n es menor a 12
 # Crear un repositorio con las diferentes funciones en python
 # Utilizar chat gpt o github copilot (si usan otra mencionarla)
+
+  
+n1 = input("¿Dime el primer número?")
+n2 = input("¿Dime el segundo número?")
+print (n1+n2)
+print ("La suma de los dos números es: " + str(n1+n2))
