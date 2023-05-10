@@ -1,4 +1,28 @@
 # 1. Determinar si el número es primo
+# Pedir un número
+num = int(input("Introduce un número: "))
+
+# Comprobar si el número es 1 o menos
+if num <= 1:
+    print("El número no es primo.")
+else:
+    # Suponer que el número es primo inicialmente
+    es_primo = True
+
+    # Iterar desde 2 hasta la raíz cuadrada del número
+    for i in range(2, int(num ** 0.5) + 1):
+        # Si el número es divisible por i, no es primo
+        if num % i == 0:
+            es_primo = False
+            break
+
+    # Imprimir el resultado
+    if es_primo:
+        print("El número es primo.")
+    else:
+        print("El número no es primo.")
+
+
 # 2. Determinar si el número es par
 # 3. Imprimir los números enteros entre -n y n siendo n el número ingresado por el usario
 # 4. Imprimir un verso que utilice dicho número si el número está entre 0 y 10
