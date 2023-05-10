@@ -24,12 +24,109 @@ else:
 
 
 # 2. Determinar si el número es par
-# 3. Imprimir los números enteros entre -n y n siendo n el número ingresado por el usario
+# Pedir un número
+num = int(input("Introduce un número: "))
+
+# Comprobar si el número es par
+if num % 2 == 0:
+    print("El número es par.")
+else:
+    print("El número es impar.")
+    
+    
+# 3. Imprimir los números enteros entre -n y n siendo n el número ingresado por el usuario
+# Pedir un número
+n = int(input("Introduce un número: "))
+
+# Iterar desde -n hasta n
+for i in range(-n, n + 1):
+    # Imprimir el número
+    print(i)
+    
+    
 # 4. Imprimir un verso que utilice dicho número si el número está entre 0 y 10
+# Pedir un número
+n = int(input("Introduce un número: "))
+
+# Definir una lista de versos
+versos = [
+    "Cero es el principio de todo",
+    "Uno es el sol que nos alumbra",
+    "Dos son las alas de la paloma",
+    "Tres son los reyes de oriente",
+    "Cuatro son las estaciones del año",
+    "Cinco son los dedos de la mano",
+    "Seis son los días de la creación",
+    "Siete son las maravillas del mundo",
+    "Ocho son las patas de la araña",
+    "Nueve son las musas de la poesía",
+    "Diez son los mandamientos de la ley"
+]
+
+# Comprobar si el número está entre 0 y 10
+if 0 <= n <= 10:
+    # Imprimir el verso correspondiente
+    print(versos[n])
+else:
+    # Imprimir un mensaje de error
+    print("El número no está entre 0 y 10.")
+    
 # 5. Imprimir el número ingresado en letras 989 --> novecientos ochenta y nueve
+no puedo el chat se trabo
+
 # 6. Buscar una palabra en inglés que tenga la cantidad de dígitos de n si n es menor a 7 y mayor a 0
+# Definir una lista de palabras en inglés
+palabras = ["hello", "world", "python", "bing", "search"]
+
+# Definir el valor de n
+n = 4
+
+# Recorrer la lista de palabras
+for palabra in palabras:
+  # Buscar la palabra que tenga n letras
+  if palabra.find("") == n - 1:
+    # Imprimir la palabra encontrada
+    print(palabra)
+    # Salir del bucle
+    break
+    
 # 7. Calcular la cantidad de segundo transcurridos desde una fecha aleatoria y dicha fecha + n
+# Importar el módulo datetime
+import datetime
+
+# Generar una fecha aleatoria
+fecha1 = datetime.datetime (2023, 5, 9, 19, 53, 41)
+
+# Sumar n segundos a la fecha aleatoria
+n = 10
+fecha2 = fecha1 + datetime.timedelta (seconds=n)
+
+# Calcular la diferencia en segundos entre las dos fechas
+diferencia = fecha2 - fecha1
+segundos = diferencia.total_seconds ()
+
+# Imprimir el resultado
+print(segundos)
+
+
+
 # 8. Calcular el factorial de n si n es menor a 12
+# Importar el módulo math
+import math
+
+# Definir el valor de n
+n = 5
+
+# Verificar que n sea un entero positivo menor a 12
+if isinstance (n, int) and n >= 0 and n < 12:
+  # Calcular el factorial de n
+  factorial = math.factorial (n)
+  # Imprimir el resultado
+  print(factorial)
+else:
+  # Lanzar una excepción
+  raise ValueError ("n debe ser un entero positivo menor a 12")
+  
 # Crear un repositorio con las diferentes funciones en python
 # Utilizar chat gpt o github copilot (si usan otra mencionarla)
 
