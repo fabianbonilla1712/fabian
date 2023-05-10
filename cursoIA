@@ -23,6 +23,7 @@ else:
         print("El número no es primo.")
 
 
+
 # 2. Determinar si el número es par
 # Pedir un número
 num = int(input("Introduce un número: "))
@@ -34,6 +35,8 @@ else:
     print("El número es impar.")
     
     
+    
+    
 # 3. Imprimir los números enteros entre -n y n siendo n el número ingresado por el usuario
 # Pedir un número
 n = int(input("Introduce un número: "))
@@ -42,6 +45,8 @@ n = int(input("Introduce un número: "))
 for i in range(-n, n + 1):
     # Imprimir el número
     print(i)
+    
+    
     
     
 # 4. Imprimir un verso que utilice dicho número si el número está entre 0 y 10
@@ -71,8 +76,27 @@ else:
     # Imprimir un mensaje de error
     print("El número no está entre 0 y 10.")
     
+    
+    
 # 5. Imprimir el número ingresado en letras 989 --> novecientos ochenta y nueve
-no puedo el chat se trabo
+# Importar el módulo num2words
+from num2words import num2words
+
+# Pedir al usuario que ingrese un número
+numero = int(input("Ingrese un número: "))
+
+# Verificar que el número sea válido
+if numero >= 0 and numero <= 9999:
+  # Convertir el número en letras
+  letras = num2words(numero, lang="es")
+  # Imprimir el resultado
+  print(letras)
+else:
+  # Lanzar una excepción
+  raise ValueError("El número debe estar entre 0 y 9999")
+  
+  
+
 
 # 6. Buscar una palabra en inglés que tenga la cantidad de dígitos de n si n es menor a 7 y mayor a 0
 # Definir una lista de palabras en inglés
@@ -89,6 +113,8 @@ for palabra in palabras:
     print(palabra)
     # Salir del bucle
     break
+    
+    
     
 # 7. Calcular la cantidad de segundo transcurridos desde una fecha aleatoria y dicha fecha + n
 # Importar el módulo datetime
